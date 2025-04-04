@@ -127,7 +127,7 @@ void paquete(int conexion)
 			free(leido);
 			break;
 		}
-		agregar_a_paquete(paquete, leido, strlen(leido));
+		agregar_a_paquete(paquete, leido, strlen(leido) + 1);
 		free(leido);
 	}
 	enviar_paquete(paquete, conexion);
